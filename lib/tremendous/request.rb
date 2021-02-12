@@ -32,6 +32,7 @@ module Tremendous
 
       data[:verify] = false
 
+
       HTTParty.send(method, url, data, *opts)
     end
 
