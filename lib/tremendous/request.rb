@@ -30,6 +30,8 @@ module Tremendous
         'authorization' => "Bearer #{@access_token}"
       }.merge(data.class == Hash ? data[:headers] || {} : {})
 
+      data[:verify] = false
+
       HTTParty.send(method, url, data, *opts)
     end
 
